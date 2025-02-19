@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koal-IA 🐨</title>
+    
+    <!-- Material Design 3 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+    
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="./assets/lofi-music.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <audio id="click-sound">
+        <source src="./assets/click-sound.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <header class="header">
+        <h1 class="titulo_destacado md-typescale-display-large">Te invito a escuchar estos podcast🐨</h1>
+    </header>
+    <section class="podcast-links">
+        <div class="podcast-item fade-in">
+            <md-elevated-card class="card">
+                <a href="https://creators.spotify.com/pod/show/jjas" target="_blank" class="podcast-container">
+                    <img src="./assets/ciencia.jpeg" alt="Podcast 1" class="podcast-image">
+                </a>
+                <div class="descripcion-container">
+                    <p class="descripcion md-typescale-body-large">Bienvenido a CiencIA, el espacio donde la ciencia se vuelve accesible
+                        y emocionante. En cada episodio, utilizamos inteligencia artificial 
+                        para narrar documentos científicos y tesis...</p>
+                    <md-filled-button class="ver-mas">Ver más</md-filled-button>
+                    <p class="descripcion-completa md-typescale-body-large">Bienvenido a CiencIA, el espacio donde 
+                        la ciencia se vuelve accesible y emocionante. En cada episodio, utilizamos inteligencia artificial 
+                        para narrar documentos científicos y tesis, permitiendo que el conocimiento llegue a todos, sin importar
+                        la complejidad técnica o la dificultad de acceso a los textos originales. Nuestro objetivo es difundir la
+                        ciencia y dar a conocer trabajos de investigación que merecen ser escuchados y entendidos, siempre respetando y
+                        dando crédito a los autores originales. Únete a nosotros en este viaje de descubrimiento y aprendizaje.</p>
+                </div>
+            </md-elevated-card>
+        </div>
+        <div class="podcast-item fade-in">
+            <md-elevated-card class="card">
+                <a href="https://creators.spotify.com/pod/show/jjas1" target="_blank" class="podcast-container">
+                    <img src="./assets/cienciaficicon.jpeg" alt="Podcast 2" class="podcast-image">
+                </a>
+                <div class="descripcion-container">
+                    <p class="descripcion md-typescale-body-large">Bienvenidos a "CienIA-ficción", el podcast donde la inteligencia artificial
+                        da vida a relatos de ciencia ficción de diversos autores...</p>
+                    <md-filled-button class="ver-mas">Ver más</md-filled-button>
+                    <p class="descripcion-completa md-typescale-body-large">Bienvenidos a "CienIA-ficción", el
+                        podcast donde la inteligencia artificial da vida a relatos de ciencia ficción de diversos autores.
+                        Sumérgete en aventuras intergalácticas, futuros distópicos y tecnologías inimaginables. Cada episodio
+                        explora nuevas dimensiones mientras la IA narra historias que desafían la realidad. Únete a este viaje
+                        extraordinario y descubre cómo la ciencia ficción y la inteligencia artificial crean experiencias únicas.
+                        ¡Sintoniza y déjate llevar por la imaginación!</p>
+                </div>
+            </md-elevated-card>
+        </div>
+    </section>
+    <footer class="footer md-typescale-body-medium">
+        <p>Desarrollado por Josué J.A.S. <br> josue.aguilar.jjas@gmail.com </p>
+        <div class="social-links">
+            <md-filled-button
+              class="social-button"
+              onclick="window.open('https://www.linkedin.com/in/josu%C3%A9-jes%C3%BAs-aguilar-s%C3%A1nchez-geo/', '_blank')"
+            >
+              <i class="material-icons">linkedin</i> 
+            </md-filled-button>
+
+            <md-filled-button
+            class="social-button"
+            onclick="window.open('https://github.com/JJAS-029', '_blank')"
+          >
+            <i class="material-icons">Github</i> 
+          </md-filled-button>
+        <md-filled-button
+              class="social-button"
+              onclick="window.open('https://paypal.me/cienIA?country.x=MX&locale.x=es_XC', '_blank')"
+            >
+              <i class="material-icons">Donar al proyecto</i> 
+            </md-filled-button>
+          </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
