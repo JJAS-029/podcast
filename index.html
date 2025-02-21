@@ -19,7 +19,7 @@
       import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
-    
+    <link rel="icon" href="./assets/logo_koala.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -34,47 +34,85 @@
     </audio>
 
     <header class="header">
-        <h1 class="titulo_destacado md-typescale-display-large">Te invito a escuchar estos podcast🐨</h1>
-    </header>
-    <section class="podcast-links">
-        <div class="podcast-item fade-in">
-            <md-elevated-card class="card">
-                <a href="https://creators.spotify.com/pod/show/jjas" target="_blank" class="podcast-container">
-                    <img src="./assets/ciencia.jpeg" alt="Podcast 1" class="podcast-image">
-                </a>
-                <div class="descripcion-container">
-                    <p class="descripcion md-typescale-body-large">Bienvenido a CiencIA, el espacio donde la ciencia se vuelve accesible
-                        y emocionante. En cada episodio, utilizamos inteligencia artificial 
-                        para narrar documentos científicos y tesis...</p>
-                    <md-filled-button class="ver-mas">Ver más</md-filled-button>
-                    <p class="descripcion-completa md-typescale-body-large">Bienvenido a CiencIA, el espacio donde 
-                        la ciencia se vuelve accesible y emocionante. En cada episodio, utilizamos inteligencia artificial 
-                        para narrar documentos científicos y tesis, permitiendo que el conocimiento llegue a todos, sin importar
-                        la complejidad técnica o la dificultad de acceso a los textos originales. Nuestro objetivo es difundir la
-                        ciencia y dar a conocer trabajos de investigación que merecen ser escuchados y entendidos, siempre respetando y
-                        dando crédito a los autores originales. Únete a nosotros en este viaje de descubrimiento y aprendizaje.</p>
-                </div>
-            </md-elevated-card>
-        </div>
-        <div class="podcast-item fade-in">
-            <md-elevated-card class="card">
-                <a href="https://creators.spotify.com/pod/show/jjas1" target="_blank" class="podcast-container">
-                    <img src="./assets/cienciaficicon.jpeg" alt="Podcast 2" class="podcast-image">
-                </a>
-                <div class="descripcion-container">
-                    <p class="descripcion md-typescale-body-large">Bienvenidos a "CienIA-ficción", el podcast donde la inteligencia artificial
-                        da vida a relatos de ciencia ficción de diversos autores...</p>
-                    <md-filled-button class="ver-mas">Ver más</md-filled-button>
-                    <p class="descripcion-completa md-typescale-body-large">Bienvenidos a "CienIA-ficción", el
-                        podcast donde la inteligencia artificial da vida a relatos de ciencia ficción de diversos autores.
-                        Sumérgete en aventuras intergalácticas, futuros distópicos y tecnologías inimaginables. Cada episodio
-                        explora nuevas dimensiones mientras la IA narra historias que desafían la realidad. Únete a este viaje
-                        extraordinario y descubre cómo la ciencia ficción y la inteligencia artificial crean experiencias únicas.
-                        ¡Sintoniza y déjate llevar por la imaginación!</p>
-                </div>
-            </md-elevated-card>
-        </div>
-    </section>
+      <h1 class="titulo_destacado md-typescale-display-large">Te invito a escuchar 🎙️🐨</h1>
+  </header>
+
+  <main class="podcast-links">
+      <div class="podcast-item fade-in">
+          <md-elevated-card class="card">
+              <a href="https://creators.spotify.com/pod/show/jjas" 
+                 target="_blank" 
+                 class="podcast-container"
+                 aria-label="Ir al podcast CiencIA en Spotify">
+                  <img src="./assets/ciencia.jpeg" 
+                       alt="Portada del podcast CiencIA - Documentos científicos narrados por IA" 
+                       class="podcast-image">
+              </a>
+              <div class="descripcion-container">
+                  <p class="descripcion md-typescale-body-large">Bienvenido a CiencIA, el espacio donde la ciencia se vuelve accesible
+                      y emocionante. En cada episodio, utilizamos inteligencia artificial 
+                      para narrar documentos científicos y tesis...</p>
+                  <md-filled-button class="ver-mas" aria-label="Ver descripción completa">Ver más</md-filled-button>
+                  <p class="descripcion-completa md-typescale-body-large">Bienvenido a CiencIA, el espacio donde 
+                      la ciencia se vuelve accesible y emocionante. En cada episodio, utilizamos inteligencia artificial 
+                      para narrar documentos científicos y tesis, permitiendo que el conocimiento llegue a todos, sin importar
+                      la complejidad técnica o la dificultad de acceso a los textos originales. Nuestro objetivo es difundir la
+                      ciencia y dar a conocer trabajos de investigación que merecen ser escuchados y entendidos, siempre respetando y
+                      dando crédito a los autores originales. Únete a nosotros en este viaje de descubrimiento y aprendizaje.</p>
+              </div>
+          </md-elevated-card>
+      </div>
+
+      <div class="podcast-item fade-in">
+          <md-elevated-card class="card">
+              <a href="https://creators.spotify.com/pod/show/jjas1" 
+                 target="_blank" 
+                 class="podcast-container"
+                 aria-label="Ir al podcast CienIA-ficción en Spotify">
+                  <img src="./assets/cienciaficicon.jpeg" 
+                       alt="Portada del podcast CienIA-ficción - Relatos de ciencia ficción narrados por IA" 
+                       class="podcast-image">
+              </a>
+              <div class="descripcion-container">
+                  <p class="descripcion md-typescale-body-large">Bienvenidos a "CienIA-ficción", el podcast donde la inteligencia artificial
+                      da vida a relatos de ciencia ficción de diversos autores...</p>
+                  <md-filled-button class="ver-mas" aria-label="Ver descripción completa">Ver más</md-filled-button>
+                  <p class="descripcion-completa md-typescale-body-large">Bienvenidos a "CienIA-ficción", el
+                      podcast donde la inteligencia artificial da vida a relatos de ciencia ficción de diversos autores.
+                      Sumérgete en aventuras intergalácticas, futuros distópicos y tecnologías inimaginables. Cada episodio
+                      explora nuevas dimensiones mientras la IA narra historias que desafían la realidad. Únete a este viaje
+                      extraordinario y descubre cómo la ciencia ficción y la inteligencia artificial crean experiencias únicas.
+                      ¡Sintoniza y déjate llevar por la imaginación!</p>
+              </div>
+          </md-elevated-card>
+      </div>
+
+      <!-- Nuevo Podcast -->
+      <div class="podcast-item fade-in">
+          <md-elevated-card class="card">
+              <a href="https://soundcloud.com/josue-aguilar-jjas" 
+                 target="_blank" 
+                 class="podcast-container"
+                 aria-label="Ir a Jingling Koala en Soundcloud">
+                  <img src="./assets/jk.png" 
+                       alt="Portada del podcast CienIA-histórica - Documentos históricos narrados por IA" 
+                       class="podcast-image">
+              </a>
+              <div class="descripcion-container">
+                  <p class="descripcion md-typescale-body-large">Bienvenidos a "Jingling Koala", nuestro rincón encantado, donde la tecnología
+                    se convierte en arte y la creatividad florece en melodías que acarician el alma....</p>
+                  <md-filled-button class="ver-mas" aria-label="Ver descripción completa">Ver más</md-filled-button>
+                  <p class="descripcion-completa md-typescale-body-large">
+                    Bienvenidos a "Jingling Koala", nuestro rincón encantado, donde la tecnología
+                    se convierte en arte y la creatividad florece en melodías que acarician el alma.
+                    Sumérgete en un mundo de canciones únicas, forjadas con la chispa de la inteligencia
+                    artificial, cada una irradiando calidez y emociones puras.
+                  </p>
+              </div>
+          </md-elevated-card>
+      </div>
+  </main>
+  
     <footer class="footer md-typescale-body-medium">
         <p>Desarrollado por Josué J.A.S. <br> josue.aguilar.jjas@gmail.com </p>
         <div class="social-links">
