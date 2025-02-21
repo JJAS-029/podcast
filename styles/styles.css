@@ -8,6 +8,13 @@
     --md-sys-color-on-surface: #e2e2e5;
     --md-sys-color-surface-container: #2e3133;
     --md-sys-color-on-surface-variant: #c3c7cf;
+
+    /**/
+    --float-animation-duration: 3s;
+    --float-animation-height: 8px;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+   /**/ 
 }
 
 * {
@@ -247,5 +254,91 @@ md-filled-button.ver-mas {
 
     .podcast-container {
         width: 100%;
+    }
+}
+
+/*-----------------------------------------------------------------*/
+/* Definición de la animación de levitación */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(calc(var(--float-animation-height) * -1));
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos base de la tarjeta */
+.card {
+    /* ... (estilos existentes) ... */
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+    animation: floating var(--float-animation-duration) ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Cada tarjeta tiene un delay diferente para que no floten todas al mismo tiempo */
+.podcast-item:nth-child(1) .card {
+    animation-delay: 0s;
+}
+
+.podcast-item:nth-child(2) .card {
+    animation-delay: calc(var(--float-animation-duration) / -3);
+}
+
+.podcast-item:nth-child(3) .card {
+    animation-delay: calc(var(--float-animation-duration) / -1.5);
+}
+
+/* Al hacer hover, detener la animación y aplicar un efecto de elevación */
+.podcast-item:hover .card {
+    animation-play-state: paused;
+    transform: translateY(calc(var(--float-animation-height) * -1));
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Efecto de brillo sutil en hover */
+.podcast-item:hover .card::before {
+    opacity: 1;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius-lg);
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.03) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Optimización para dispositivos que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        animation: none;
+    }
+    
+    .podcast-item:hover .card {
+        transform: translateY(-5px);
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .card {
+        animation-duration: calc(var(--float-animation-duration) * 1.2);
+        --float-animation-height: 6px; /* Reducir la altura de la animación en móviles */
     }
 }
